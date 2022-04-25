@@ -90,7 +90,7 @@ class HTTPHeader:
         
     def countValidInvalid(self):
         if not len(self.headersDict):
-            return False
+            return 0,0
         valid = 0
         for key in self.headersDict:
             if self.headersDict[key]["valid"]:
@@ -112,4 +112,3 @@ class HTTPHeader:
         if self.error:
             return False
         return self.headersDict
-
